@@ -44,8 +44,8 @@ for stopword in common_words:
 # Counting of accumulated frequency for top words after every page and storing to list result
 result = []
 accumulated_list = []
-for i in range(len(lists_by_page)):
-    accumulated_list = accumulated_list + lists_by_page[i]
+for list_by_page in lists_by_page:
+    accumulated_list = accumulated_list + list_by_page
     result.append(pd.Series(accumulated_list).value_counts()[0:20])
 
 # Converting of list with result to pandas dataframe
