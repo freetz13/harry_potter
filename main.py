@@ -12,9 +12,7 @@ with open("Book 5 - The Order of the Phoenix.txt", "r", encoding='utf-8') as fil
     file_rows = file.readlines()
 
 # Creation of a string with text of book
-file_text = ""
-for i in file_rows:
-    file_text = file_text + i
+file_text = "".join(file_rows)
 
 # Replacing of name of book from headings of pages
 file_text = file_text.replace("Harry Potter and the Order of the Phoenix -J.K. Rowling", "")
