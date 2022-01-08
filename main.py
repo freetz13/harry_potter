@@ -19,15 +19,12 @@ file_text = file_text.replace("Harry Potter and the Order of the Phoenix - J.K. 
 file_text = file_text.lower()
 
 # Removing of punctuation and special characters
-for i in ["- ", "-\n"]:
-    file_text = file_text.replace(i, "-")
+file_text = re.sub(r"- |-\n", "-", file_text)
 
-for i in ["\n", ",", "?", ".", ';', ':', 's', "!"]:
-    file_text = file_text.replace(i, "")
+file_text = re.sub(r"\n,\?\.;:s!", "", file_text)
 
 # Removing of numbers
-for i in ["1", "2", "3", "4", '5', '6', '7', '8', '9', '0']:
-    file_text = file_text.replace(i, "")
+file_text = re.sub(r"\d+", "", file_text)
 
 # Splitting of text by pages and storing data to list
 file_text = file_text.replace('page |', "@")
