@@ -1,1 +1,3 @@
 Обязательно склонируйте [репозитарий Whiteboard](https://github.com/formcept/whiteboard), возьмите оттуда файл `nbviewer/notebooks/data/harrypotter/Book 5 - The Order of the Phoenix.txt` и скопируйте его в каталог этого репозитария.
+
+Этот репозитарий создан для демонстрации возможного улучшения кода, показанного в [этом видео](https://www.youtube.com/watch?v=8OCu4JizDGk), которое было опубликовано в [этом посте на Пикабу](https://pikabu.ru/story/dinamika_klyuchevyikh_slov_v_garri_potter_i_orden_feniksa_8735510). Описание изменений смотрите в [этом посте](https://pikabu.ru/story/otvet_na_post_dinamika_klyuchevyikh_slov_v_garri_potter_i_orden_feniksa_8746583).
