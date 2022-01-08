@@ -30,9 +30,7 @@ file_text = re.sub(r"\d+", "", file_text)
 file_list = file_text.split("page |")
 
 # Splitting of pages to lists of words
-lists_by_page = []
-for i in file_list:
-    lists_by_page.append(i.split())
+lists_by_page = [i.split() for i in file_list]
 
 # Removing of stopwords
 common_words = nltk.corpus.stopwords.words('english') + ['dont', 'hadnt', 'didnt', 'youre']
