@@ -27,8 +27,7 @@ file_text = re.sub(r"\n,\?\.;:s!", "", file_text)
 file_text = re.sub(r"\d+", "", file_text)
 
 # Splitting of text by pages and storing data to list
-file_text = file_text.replace('page |', "@")
-file_list = file_text.split("@")
+file_list = file_text.split("page |")
 
 # Splitting of pages to lists of words
 lists_by_page = []
