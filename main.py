@@ -7,12 +7,9 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-# Reading of book by lines and storing to list file_rows
+# Reading of book by lines and storing to string file_text
 with open("Book 5 - The Order of the Phoenix.txt", "r", encoding='utf-8') as file:
-    file_rows = file.readlines()
-
-# Creation of a string with text of book
-file_text = "".join(file_rows)
+    file_text = file.read()
 
 # Replacing of name of book from headings of pages
 file_text = file_text.replace("Harry Potter and the Order of the Phoenix -J.K. Rowling", "")
