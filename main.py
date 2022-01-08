@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore")
 # Reading of book by lines and storing to list file_rows
 file = open("Book 5 - The Order of the Phoenix.txt", "r", encoding='utf-8')
 file_rows = file.readlines()
-file.close
+file.close()
 
 # Creation of a string with text of book
 file_text = ""
