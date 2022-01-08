@@ -34,23 +34,23 @@ lists_by_page = [i.split() for i in file_list]
 
 # Removing of stopwords
 common_words = nltk.corpus.stopwords.words('english') + ['dont', 'hadnt', 'didnt', 'youre']
-for i in common_words:
-    for j in range(0, len(lists_by_page)):
-        for k in range(0, len(lists_by_page[j])):
-            if i == lists_by_page[j][k]:
-                lists_by_page[j][k] = np.nan
+for stopword in common_words:
+    for i in range(len(lists_by_page)):
+        for j in range(len(lists_by_page[i])):
+            if stopword == lists_by_page[i][j]:
+                lists_by_page[i][j] = np.nan
 
 
 # Counting of accumulated frequency for top words after every page and storing to list result
 result = []
 accumulated_list = []
-for i in range(0, len(lists_by_page)):
+for i in range(len(lists_by_page)):
     accumulated_list = accumulated_list + lists_by_page[i]
     result.append(pd.Series(accumulated_list).value_counts()[0:20])
 
 # Converting of list with result to pandas dataframe
 final_dataframe = pd.DataFrame(columns = ['Word', 'Frequency', 'Page'])
-for i in range(0, len(result)):
+for i in range(len(result)):
     page_dataframe = pd.DataFrame({"Frequency":result[i]})
     page_dataframe["Word"] = page_dataframe.index
     page_dataframe = page_dataframe.reset_index(drop=True)
@@ -65,7 +65,7 @@ final_pivot = pd.pivot_table(final_dataframe, values='Frequency', columns=['Word
 final = pd.DataFrame(final_pivot.to_records())
 final = final.drop(columns='Page')
 my_index = []
-for i in range(0, len(final)):
+for i in range(len(final)):
     my_index.append("Pages read: " + str(i + 1))
 final["Page"] = my_index
 final = final.set_index('Page')
