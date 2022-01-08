@@ -22,7 +22,7 @@ file_text = file_text.lower()
 for i in ["- ", "-\n"]:
     file_text = file_text.replace(i, "-")
 
-for i in ["\n", ",", "?", ".", '', '', ';', ':', 's', '', "!"]:
+for i in ["\n", ",", "?", ".", ';', ':', 's', "!"]:
     file_text = file_text.replace(i, "")
 
 # Removing of numbers
