@@ -1,0 +1,1 @@
+Обязательно склонируйте [репозитарий Whiteboard](https://github.com/formcept/whiteboard), возьмите оттуда файл `nbviewer/notebooks/data/harrypotter/Book 5 - The Order of the Phoenix.txt` и скопируйте его в каталог этого репозитария.
